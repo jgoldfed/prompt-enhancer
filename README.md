@@ -22,9 +22,9 @@ This methodology ensures prompts are comprehensive, detailed, and leave nothing 
 
 - **One-click prompt enhancement** using CRAFT principles
 - **Perplexity Comet integration** - seamlessly works within your browser
-- **Smart context detection** - adapts enhancement based on your query type
-- **Customizable templates** - save your preferred prompt structures
-- **Real-time preview** - see enhanced prompts before submitting
+- **Multiple enhancement modes** - clarity, detail, professional, and creative styles
+- **Enhancement history** - tracks and saves your prompt improvements
+- **Groq API integration** - powered by fast, efficient LLM processing
 
 ## 🚀 Installation
 
