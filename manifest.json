@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Enhancer",
+  "version": "1.0.0",
+  "description": "Enhance your prompts using Groq AI for better results in Perplexity Comet and other AI platforms",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://www.perplexity.ai/*",
+    "*://*.perplexity.ai/*",
+    "*://chat.openai.com/*",
+    "*://chatgpt.com/*",
+    "*://*.openai.com/*",
+    "https://api.groq.com/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://chat.openai.com/*",
+        "*://chatgpt.com/*",
+        "*://www.perplexity.ai/*",
+        "*://*.perplexity.ai/*",
+        "*://claude.ai/*",
+        "*://www.claude.ai/*",
+        "*://*.claude.ai/*",
+        "*://gemini.google.com/*",
+        "*://bard.google.com/*",
+        "*://notebooklm.google.com/*",
+        "*://chat.deepseek.com/*",
+        "*://www.deepseek.com/*",
+        "*://*.deepseek.com/*",
+        "*://poe.com/*",
+        "*://www.poe.com/*",
+        "*://*.poe.com/*",
+        "*://abacus.ai/*",
+        "*://www.abacus.ai/*",
+        "*://*.abacus.ai/*",
+        "*://manus.chat/*",
+        "*://www.manus.chat/*",
+        "*://*.manus.chat/*",
+        "*://you.com/*",
+        "*://www.you.com/*",
+        "*://character.ai/*",
+        "*://www.character.ai/*",
+        "*://huggingface.co/chat/*",
+        "*://chat.mistral.ai/*",
+        "*://www.mistral.ai/*",
+        "*://replicate.com/*",
+        "*://www.replicate.com/*"
+      ],
+      "js": ["content/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Perplexity Prompt Enhancer",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "32": "public/icons/icon32.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "32": "public/icons/icon32.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/*"],
+      "matches": ["*://www.perplexity.ai/*", "*://*.perplexity.ai/*", "*://chat.openai.com/*", "*://chatgpt.com/*", "*://*.openai.com/*"]
+    }
+  ]
+}
